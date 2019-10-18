@@ -1,7 +1,5 @@
 pipeline {
-    agent any
-    environment { 
-        HTTP_PROXY = 'http://10.19.16.165:8080'
+    agent { docker { image 'maven:3.3.3' } }
     }
     stages {
         stage('---clean---') {
